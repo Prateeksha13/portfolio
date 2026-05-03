@@ -10,7 +10,7 @@ export default function Contact() {
   return (
     <div className="page-enter pt-32 pb-24 px-6 md:px-12 max-w-7xl mx-auto">
       <ScrollReveal className="mb-16">
-        <span className="text-xs tracking-[0.22em] text-[#8A8A82] uppercase">Contact</span>
+        <span className="text-[11px] tracking-[0.28em] text-[#AAA] uppercase">Contact</span>
       </ScrollReveal>
 
       <div className="max-w-2xl">

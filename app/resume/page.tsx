@@ -86,7 +86,7 @@ export default function Resume() {
       <ScrollReveal className="mb-14">
         <div className="flex items-start justify-between flex-wrap gap-5">
           <div>
-            <span className="text-sm tracking-[0.22em] text-[#555] uppercase block mb-4">Résumé</span>
+            <span className="text-[11px] tracking-[0.28em] text-[#AAA] uppercase block mb-4">Résumé</span>
             <h1 className="font-display font-semibold text-[#1C1C1A] mb-2" style={{ fontSize: 'clamp(2rem, 5vw, 3.5rem)' }}>
               Prateeksha
             </h1>
@@ -125,7 +125,7 @@ export default function Resume() {
 
       {/* Summary */}
       <ScrollReveal className="mb-14 pb-14 border-b border-[#E2E0DA]">
-        <p className="text-sm text-[#555] uppercase tracking-[0.18em] mb-4">Summary</p>
+        <p className="text-[11px] text-[#AAA] uppercase tracking-[0.28em] mb-4">Summary</p>
         <p className="text-base text-[#1C1C1A]/80 leading-relaxed">
           8+ years designing 0→1 and scalable products across fintech and SaaS. Led design of payment systems
           supporting $1B+ in transaction value. Built and scaled products including fintech systems used by
@@ -136,7 +136,7 @@ export default function Resume() {
 
       {/* Experience */}
       <ScrollReveal className="mb-6">
-        <p className="text-sm text-[#555] uppercase tracking-[0.18em]">Experience</p>
+        <p className="text-[11px] text-[#AAA] uppercase tracking-[0.28em]">Experience</p>
       </ScrollReveal>
 
       <div className="mb-14 space-y-10">
@@ -163,7 +163,7 @@ export default function Resume() {
 
       {/* Skills */}
       <ScrollReveal className="mb-6">
-        <p className="text-sm text-[#555] uppercase tracking-[0.18em]">Skills</p>
+        <p className="text-[11px] text-[#AAA] uppercase tracking-[0.28em]">Skills</p>
       </ScrollReveal>
 
       <div className="mb-14 space-y-4 border-b border-[#E2E0DA] pb-14">
@@ -179,7 +179,7 @@ export default function Resume() {
 
       {/* Education */}
       <ScrollReveal className="mb-6">
-        <p className="text-sm text-[#555] uppercase tracking-[0.18em]">Education</p>
+        <p className="text-[11px] text-[#AAA] uppercase tracking-[0.28em]">Education</p>
       </ScrollReveal>
 
       <ScrollReveal>

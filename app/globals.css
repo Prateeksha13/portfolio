@@ -42,7 +42,6 @@ body {
   inset: 0;
   z-index: 0;
   pointer-events: none;
-  overflow: hidden;
 }
 
 .content-layer {
@@ -59,18 +58,18 @@ body {
 .g-blob-1 {
   width: clamp(400px, 70vmax, 950px);
   height: clamp(400px, 70vmax, 950px);
-  background: radial-gradient(circle at center, rgba(255, 160, 80, 0.52) 0%, transparent 62%);
+  background: radial-gradient(circle at center, rgba(255, 160, 80, 0.50) 0%, transparent 62%);
   filter: blur(140px);
   top: -15%;
   right: -15%;
   animation: blobFloat1 26s ease-in-out infinite alternate;
 }
 
-/* Pink — right, mid-height (visible on both mobile and desktop) */
+/* Pink — right, mid-height */
 .g-blob-2 {
   width: clamp(350px, 60vmax, 850px);
   height: clamp(350px, 60vmax, 850px);
-  background: radial-gradient(circle at center, rgba(255, 130, 175, 0.42) 0%, transparent 62%);
+  background: radial-gradient(circle at center, rgba(255, 120, 170, 0.40) 0%, transparent 62%);
   filter: blur(130px);
   top: 35%;
   right: -20%;
@@ -81,7 +80,7 @@ body {
 .g-blob-3 {
   width: clamp(350px, 55vmax, 800px);
   height: clamp(350px, 55vmax, 800px);
-  background: radial-gradient(circle at center, rgba(120, 170, 255, 0.40) 0%, transparent 62%);
+  background: radial-gradient(circle at center, rgba(110, 160, 255, 0.38) 0%, transparent 62%);
   filter: blur(120px);
   bottom: -12%;
   left: -15%;
@@ -90,17 +89,17 @@ body {
 
 @keyframes blobFloat1 {
   from { transform: translate(0, 0) scale(1); }
-  to   { transform: translate(-7%, 10%) scale(1.14); }
+  to   { transform: translate(-8%, 12%) scale(1.15); }
 }
 
 @keyframes blobFloat2 {
-  from { transform: translate(0, 0) scale(1.05); }
-  to   { transform: translate(-10%, -8%) scale(0.90); }
+  from { transform: translate(0, 0) scale(1.04); }
+  to   { transform: translate(-11%, -10%) scale(0.88); }
 }
 
 @keyframes blobFloat3 {
-  from { transform: translate(0, 0) scale(0.95); }
-  to   { transform: translate(8%, -6%) scale(1.10); }
+  from { transform: translate(0, 0) scale(0.93); }
+  to   { transform: translate(10%, -7%) scale(1.12); }
 }
 
 /* Custom cursor */

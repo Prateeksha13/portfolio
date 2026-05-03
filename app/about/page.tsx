@@ -34,7 +34,7 @@ export default function About() {
     <div className="page-enter pt-32 pb-24 px-6 md:px-12 max-w-7xl mx-auto">
       {/* Page label */}
       <ScrollReveal className="mb-16">
-        <span className="text-sm tracking-[0.22em] text-[#555] uppercase">About</span>
+        <span className="text-[11px] tracking-[0.28em] text-[#AAA] uppercase">About</span>
       </ScrollReveal>
 
       {/* Two-column layout */}
@@ -112,7 +112,7 @@ export default function About() {
           {skills.map((group, i) => (
             <ScrollReveal key={group.category} delay={i * 80}>
               <div>
-                <p className="text-sm tracking-[0.2em] text-[#555] uppercase mb-4">{group.category}</p>
+                <p className="text-[11px] tracking-[0.28em] text-[#AAA] uppercase mb-4">{group.category}</p>
                 <ul className="space-y-2">
                   {group.items.map((item) => (
                     <li key={item} className="text-sm text-[#1C1C1A]/80 flex items-center gap-2">
