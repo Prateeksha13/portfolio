@@ -3,7 +3,7 @@ import Link from 'next/link'
 import ScrollReveal from '@/components/ScrollReveal'
 
 export const metadata: Metadata = {
-  title: 'Freelancer Payments & Invoicing — Gnosis Business · Prateeksha',
+  title: 'Freelancer Payments — Gnosis Business · Prateeksha',
   description: 'No onboarding. No friction. Just connect your wallet and get paid.',
 }
 
@@ -60,10 +60,10 @@ export default function FreelancerPaymentsCase() {
 
           <ScrollReveal delay={100}>
             <h1
-              className="font-display font-semibold text-[#1C1C1A] leading-[1.02] tracking-tight mb-8"
+              className="font-display text-[#1C1C1A] leading-[1.02] tracking-tight mb-8"
               style={{ fontSize: 'clamp(2.2rem, 5.5vw, 4rem)' }}
             >
-              Freelancer<br />Payments &<br />Invoicing
+              Freelancer<br />Payments
             </h1>
           </ScrollReveal>
 
@@ -85,7 +85,7 @@ export default function FreelancerPaymentsCase() {
             style={{ backgroundColor: '#D5CFC8', height: 'clamp(280px, 50vw, 640px)' }}
           >
             <span
-              className="font-display font-semibold text-[#1C1C1A] opacity-[0.12] select-none leading-none"
+              className="font-display text-[#1C1C1A] opacity-[0.12] select-none leading-none"
               style={{ fontSize: 'clamp(4rem, 10vw, 9rem)' }}
             >
               GB
@@ -107,10 +107,10 @@ export default function FreelancerPaymentsCase() {
             >
               Gnosis Business primarily served finance teams at mid-sized companies. But a recurring
               pattern emerged: freelancers and contractors who worked with those businesses needed a
-              way to receive payments and issue invoices — without having to sign up for a full
-              business account. I designed a standalone freelancer-facing product that let contractors
-              get paid directly to a wallet, generate invoices, and track payment status — all
-              without the overhead of the main platform's onboarding.
+              way to receive payments — without signing up for a full business account. The product
+              was built around payment links, with the option to attach an invoice. Freelancers could
+              create a payment link, share it with a client, and get notified by email when the
+              payment arrived.
             </p>
           </section>
         </ScrollReveal>
@@ -124,9 +124,9 @@ export default function FreelancerPaymentsCase() {
               style={{ fontSize: 'clamp(1rem, 1.3vw, 1.1rem)' }}
             >
               Freelancers don't think in treasury management or approval workflows. They think in
-              jobs, invoices, and "has the money arrived yet?" The existing platform was built for
-              finance managers — layered with permissions, multi-step onboarding, and concepts that
-              meant nothing to a solo contractor.
+              jobs and "has the money arrived yet?" The existing platform was built for finance
+              managers — layered with permissions, multi-step onboarding, and concepts that meant
+              nothing to a solo contractor.
             </p>
             <p
               className="text-[#1C1C1A]/80 leading-relaxed mt-5"
@@ -147,16 +147,16 @@ export default function FreelancerPaymentsCase() {
               className="text-[#1C1C1A]/80 leading-relaxed"
               style={{ fontSize: 'clamp(1rem, 1.3vw, 1.1rem)' }}
             >
-              Lead designer, 0 to 1. Defined the product scope with the PM, conducted interviews
-              with freelancers across Singapore and India, designed all flows from wallet connection
-              through invoice delivery, and shipped a prototype used in early pilot testing.
+              Lead designer. Responsible for the branding, UX flows, and end-to-end design of the
+              freelancer product. The product was built around payments and payment links, with
+              upcoming features including cards and off-ramp.
             </p>
           </section>
         </ScrollReveal>
 
         <ImagePlaceholder
-          label="Freelancer dashboard — wallet view and invoice list"
-          caption="Dashboard — active invoices, payment status, and wallet balance at a glance"
+          label="Freelancer dashboard — wallet view and payment links"
+          caption="Dashboard — active payment links, payment status, and wallet balance at a glance"
           bg="#D5CFC8"
         />
 
@@ -177,67 +177,43 @@ export default function FreelancerPaymentsCase() {
               style={{ fontSize: 'clamp(1rem, 1.3vw, 1.1rem)' }}
             >
               Early research made it clear: freelancers would drop off at a traditional sign-up
-              flow. Name, business type, tax ID — all of it felt like a bank application. We cut
-              it. Instead, a freelancer could connect an existing crypto wallet in one step and
-              immediately generate a payment link to send to their client.
+              flow. Name, business type, lengthy verification — all of it felt like a bank
+              application. Instead, a freelancer could connect an existing crypto wallet in one step
+              and immediately generate a payment link to share with their client.
             </p>
             <p
-              className="text-[#1C1C1A]/80 leading-relaxed mb-10"
+              className="text-[#1C1C1A]/80 leading-relaxed"
               style={{ fontSize: 'clamp(1rem, 1.3vw, 1.1rem)' }}
             >
-              Progressive profiling filled in the gaps — invoice details, tax info, preferred
-              currency — only when the user needed them, not upfront. The result was a time-to-first-invoice
-              of under two minutes in testing.
+              An email notification system kept freelancers updated when payments arrived — no need
+              to check in manually. Progressive profiling filled in optional details only when the
+              user needed them, not upfront.
             </p>
-            <div className="border-l-2 border-[#C8C4BE] pl-6">
-              <p className="text-[#555] text-sm leading-relaxed italic">
-                The biggest pushback came internally — "what if they don't complete their profile?"
-                The answer: a partial profile that generates an invoice is better than a complete
-                form that never gets submitted.
-              </p>
-            </div>
           </section>
         </ScrollReveal>
 
         <ImagePlaceholder
-          label="Invoice creation flow"
-          caption="Invoice creation — minimal fields, instant preview, one-tap send to client"
+          label="Payment link creation flow"
+          caption="Payment link creation flow — minimal fields, shareable link, email notification on receipt"
           bg="#C8C4BE"
         />
-
-        {/* Outcome */}
-        <ScrollReveal>
-          <section className="px-6 md:px-12 max-w-[760px] mx-auto mb-24">
-            <div className="border-t-2 border-[#1C1C1A] pt-10">
-              <p className="text-[11px] tracking-[0.28em] text-[#AAA] uppercase mb-8">Outcome</p>
-              <p
-                className="font-display font-light text-[#1C1C1A] leading-snug"
-                style={{ fontSize: 'clamp(1.4rem, 2.5vw, 2rem)' }}
-              >
-                Product designed and piloted with a cohort of freelancers across Singapore and
-                India. Onboarding completion rates were significantly higher than the main platform's
-                equivalent flow. Full case study in progress.
-              </p>
-            </div>
-          </section>
-        </ScrollReveal>
 
         {/* Navigation */}
         <ScrollReveal>
           <div className="px-6 md:px-12 max-w-[760px] mx-auto border-t border-[#EDEAE4] pt-10 flex items-center justify-between">
             <Link
-              href="/work/corporate-visa-card"
-              className="font-display text-[#1C1C1A] hover:opacity-60 transition-opacity link-underline"
-              style={{ fontSize: 'clamp(0.9rem, 1.3vw, 1.1rem)' }}
-            >
-              ← Corporate Visa Card
-            </Link>
-            <Link
               href="/work/payments"
               className="font-display text-[#1C1C1A] hover:opacity-60 transition-opacity link-underline"
               style={{ fontSize: 'clamp(0.9rem, 1.3vw, 1.1rem)' }}
             >
-              Payments →
+              ← Payments
+            </Link>
+            <Link
+              href="/work/corporate-visa-card"
+              className="font-display text-[#1C1C1A] hover:opacity-60 transition-opacity link-underline"
+              style={{ fontSize: 'clamp(0.9rem, 1.3vw, 1.1rem)' }}
+            >
+              Corporate Visa Card →
             </Link>
           </div>
         </ScrollReveal>

@@ -31,7 +31,7 @@ const decisions = [
   {
     title: 'Error states as a first-class design problem',
     description:
-      'Every error was specific and actionable, not generic. "Account not whitelisted" told you exactly what to fix and where. Errors that previously created support tickets became self-service moments.',
+      'Every error was specific and actionable, not generic. Errors that previously created support tickets became self-service moments.',
   },
 ]
 
@@ -70,7 +70,7 @@ export default function PaymentsCase() {
           <ScrollReveal className="mb-8">
             <Link
               href="/#works"
-              className="text-sm tracking-[0.15em] text-[#999] uppercase hover:text-[#1C1C1A] transition-colors link-underline"
+              className="text-[11px] tracking-[0.2em] text-[#AAA] uppercase hover:text-[#1C1C1A] transition-colors link-underline"
             >
               ← Works
             </Link>
@@ -88,7 +88,7 @@ export default function PaymentsCase() {
 
           <ScrollReveal delay={100}>
             <h1
-              className="font-display font-semibold text-[#1C1C1A] leading-[1.02] tracking-tight mb-8"
+              className="font-display text-[#1C1C1A] leading-[1.02] tracking-tight mb-8"
               style={{ fontSize: 'clamp(2.2rem, 5.5vw, 4rem)' }}
             >
               Payments: Bulk,<br />
@@ -115,7 +115,7 @@ export default function PaymentsCase() {
             style={{ backgroundColor: '#DDD5C8', height: 'clamp(280px, 50vw, 640px)' }}
           >
             <span
-              className="font-display font-semibold text-[#1C1C1A] opacity-[0.10] select-none leading-none"
+              className="font-display text-[#1C1C1A] opacity-[0.10] select-none leading-none"
               style={{ fontSize: 'clamp(4rem, 10vw, 9rem)' }}
             >
               Gnosis
@@ -285,22 +285,15 @@ export default function PaymentsCase() {
           </section>
         </ScrollReveal>
 
-        <ImagePlaceholder
-          label="Figma flow overview"
-          caption="Figma flow overview — full payment flow exploration"
-          bg="#EAE6E0"
-        />
-
-        {/* Next case study */}
+        {/* Navigation */}
         <ScrollReveal>
-          <div className="px-6 md:px-12 max-w-[760px] mx-auto border-t border-[#EDEAE4] pt-10 flex items-center justify-between">
-            <p className="text-sm text-[#AAA]">Next case study</p>
+          <div className="px-6 md:px-12 max-w-[760px] mx-auto border-t border-[#EDEAE4] pt-10 flex items-center justify-end">
             <Link
-              href="/works/noodle-factory-chatbot"
+              href="/work/freelancer-payments"
               className="font-display text-[#1C1C1A] hover:opacity-60 transition-opacity link-underline"
               style={{ fontSize: 'clamp(0.9rem, 1.3vw, 1.1rem)' }}
             >
-              AI Chatbot Platform →
+              Freelancer Payments →
             </Link>
           </div>
         </ScrollReveal>

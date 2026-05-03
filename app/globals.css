@@ -102,6 +102,15 @@ body {
   to   { transform: translate(10%, -7%) scale(1.12); }
 }
 
+/* On mobile, blob centers sit too close to viewport centre because vmax = vh
+   (tall) makes blobs large relative to narrow width. Push them back to corners
+   so only the soft tails wash across the screen — matching the desktop look. */
+@media (max-width: 768px) {
+  .g-blob-1 { top: -20%; right: -60%; }
+  .g-blob-2 { top: 25%;  right: -62%; }
+  .g-blob-3 { bottom: -10%; left: -18%; }
+}
+
 /* Custom cursor */
 .cursor-ring {
   position: fixed;

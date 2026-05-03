@@ -84,42 +84,32 @@ export default function Resume() {
 
       {/* Header */}
       <ScrollReveal className="mb-14">
-        <div className="flex items-start justify-between flex-wrap gap-5">
-          <div>
-            <span className="text-[11px] tracking-[0.28em] text-[#AAA] uppercase block mb-4">Résumé</span>
-            <h1 className="font-display font-semibold text-[#1C1C1A] mb-2" style={{ fontSize: 'clamp(2rem, 5vw, 3.5rem)' }}>
-              Prateeksha
-            </h1>
-            <p className="text-base text-[#555] mb-1">Lead Product Designer / Founding Designer</p>
-            <div className="flex flex-wrap items-center gap-x-4 gap-y-1 mt-3 text-sm text-[#555]">
-              <a href="https://prateeksha.ink" className="hover:text-[#1C1C1A] transition-colors link-underline" target="_blank" rel="noopener noreferrer">
-                prateeksha.ink
-              </a>
-              <span className="text-[#E2E0DA]">·</span>
-              <span>Singapore</span>
-              <span className="text-[#E2E0DA]">·</span>
-              <a href="mailto:prateeksha.ink@gmail.com" className="hover:text-[#1C1C1A] transition-colors link-underline">
-                prateeksha.ink@gmail.com
-              </a>
-              <span className="text-[#E2E0DA]">·</span>
-              <a
-                href="https://www.linkedin.com/in/prateekshatomar/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-[#1C1C1A] transition-colors link-underline"
-              >
-                LinkedIn ↗
-              </a>
-            </div>
+        <div>
+          <span className="text-[11px] tracking-[0.28em] text-[#AAA] uppercase block mb-4">Résumé</span>
+          <h1 className="font-display text-[#1C1C1A] mb-2" style={{ fontSize: 'clamp(2rem, 5vw, 3.5rem)' }}>
+            Prateeksha
+          </h1>
+          <p className="text-base text-[#555] mb-1">Product Designer</p>
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-1 mt-3 text-sm text-[#555]">
+            <a href="https://prateeksha.ink" className="hover:text-[#1C1C1A] transition-colors link-underline" target="_blank" rel="noopener noreferrer">
+              prateeksha.ink
+            </a>
+            <span className="text-[#E2E0DA]">·</span>
+            <span>Singapore</span>
+            <span className="text-[#E2E0DA]">·</span>
+            <a href="mailto:prateeksha.ink@gmail.com" className="hover:text-[#1C1C1A] transition-colors link-underline">
+              prateeksha.ink@gmail.com
+            </a>
+            <span className="text-[#E2E0DA]">·</span>
+            <a
+              href="https://www.linkedin.com/in/prateekshatomar/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-[#1C1C1A] transition-colors link-underline"
+            >
+              LinkedIn ↗
+            </a>
           </div>
-          {/* Download button — add Prateeksha-Resume.pdf to /public to activate */}
-          <a
-            href="/Prateeksha-Resume.pdf"
-            download
-            className="inline-flex items-center gap-2 border border-[#1C1C1A] text-[#1C1C1A] text-sm px-5 py-3 rounded-full hover:bg-[#1C1C1A] hover:text-[#F5F4F0] transition-all duration-300 self-start shrink-0"
-          >
-            Download Resume ↓
-          </a>
         </div>
       </ScrollReveal>
 

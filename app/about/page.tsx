@@ -3,7 +3,7 @@ import ScrollReveal from '@/components/ScrollReveal'
 
 export const metadata: Metadata = {
   title: 'About — Prateeksha',
-  description: 'Lead Product Designer with 8+ years in fintech and SaaS.',
+  description: 'Product designer with 8+ years in fintech and SaaS.',
 }
 
 const skills = [
@@ -25,7 +25,7 @@ const skills = [
   },
   {
     category: 'Leadership',
-    items: ['Founding Designer', 'Stakeholder Management', 'Cross-functional Collaboration', 'Product Strategy'],
+    items: ['Stakeholder Management', 'Cross-functional Collaboration', 'Product Strategy'],
   },
 ]
 
@@ -43,8 +43,8 @@ export default function About() {
         <div>
           <ScrollReveal>
             <h1
-              className="font-display font-semibold text-[#1C1C1A] leading-[1.05] tracking-tight mb-10"
-              style={{ fontSize: 'clamp(2.4rem, 5vw, 4rem)' }}
+              className="font-display text-[#1C1C1A] leading-[1.02] tracking-tight mb-10"
+              style={{ fontSize: 'clamp(2.2rem, 5vw, 4rem)' }}
             >
               I turn complex systems into calm, intuitive experiences.
             </h1>
@@ -53,50 +53,41 @@ export default function About() {
           <div className="space-y-5 text-[#1C1C1A]/80 leading-relaxed" style={{ fontSize: 'clamp(1rem, 1.3vw, 1.1rem)' }}>
             <ScrollReveal delay={80}>
               <p>
-                I'm Prateeksha — a Lead Product Designer who turns complex systems into calm, intuitive experiences.
-                I believe the best design doesn't announce itself. It just works, and leaves people feeling capable.
+                I'm Prateeksha — a product designer who believes the best design doesn't announce
+                itself. It just works, and leaves people feeling capable.
               </p>
             </ScrollReveal>
             <ScrollReveal delay={120}>
               <p>
-                Over 8 years, I've designed payment infrastructure, AI platforms, and 0→1 products across fintech and SaaS.
-                My background in frontend engineering means I think in systems and ship with clarity — no hand-wavy specs,
-                no lost-in-translation moments with engineers.
+                Over 8 years, I've designed payment infrastructure, AI platforms, and 0→1 products
+                across fintech and SaaS. My background in frontend engineering means I think in
+                systems and ship with clarity — no hand-wavy specs, no lost-in-translation moments
+                with engineers.
               </p>
             </ScrollReveal>
             <ScrollReveal delay={160}>
               <p>
-                Most recently at Gnosis Business, I led design of payment and asset management products now powering $1B+
-                in transactions across 200+ businesses. Before that, I built AI-powered conversational platforms,
-                no-code app builders, and design systems from scratch.
+                Most recently at Gnosis Business, I led design of payment and asset management
+                products now powering $1B+ in transactions across 200+ businesses. Before that, I
+                built AI-powered conversational platforms, no-code app builders, and design systems
+                from scratch.
               </p>
             </ScrollReveal>
             <ScrollReveal delay={200}>
               <p>
-                I work best close to the problem — partnering directly with founders and engineers, making product
-                decisions, not just design deliverables.
+                I work best close to the problem — partnering directly with founders and engineers,
+                making product decisions, not just design deliverables.
               </p>
             </ScrollReveal>
             <ScrollReveal delay={240}>
               <p className="text-[#555]">
-                Based in Singapore. Previously Bangalore.
+                Based in Singapore.
               </p>
             </ScrollReveal>
           </div>
 
-          {/* Pull quote */}
-          <ScrollReveal className="mt-16 md:mt-20">
-            <blockquote
-              className="font-display font-light text-[#AAAAAA] italic"
-              style={{ fontSize: 'clamp(1rem, 1.4vw, 1.2rem)' }}
-            >
-              "Do more with less."
-            </blockquote>
-          </ScrollReveal>
-
           <ScrollReveal className="mt-10">
             <p className="text-sm text-[#555]">
-              Available for IC lead and founding designer roles.{' '}
               <a
                 href="mailto:prateeksha.ink@gmail.com"
                 className="text-[#1C1C1A] link-underline"

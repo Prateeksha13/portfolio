@@ -169,7 +169,7 @@ export default function Home() {
       <ScrollReveal>
         <section className="border-t border-[#EDEAE4] px-6 md:px-12 py-10 max-w-7xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
           <p className="font-display text-[#1C1C1A]" style={{ fontSize: 'clamp(1.1rem, 2vw, 1.6rem)' }}>
-            Open to IC lead and founding designer roles.
+            If you're building something amazing, I'd love to hear about it.
           </p>
           <Link
             href="/contact"

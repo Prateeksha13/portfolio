@@ -3,7 +3,7 @@ import ScrollReveal from '@/components/ScrollReveal'
 
 export const metadata: Metadata = {
   title: 'Contact — Prateeksha',
-  description: 'Open to IC lead and founding designer roles.',
+  description: 'If you\'re building something amazing, I\'d love to hear about it.',
 }
 
 export default function Contact() {
@@ -16,7 +16,7 @@ export default function Contact() {
       <div className="max-w-2xl">
         <ScrollReveal>
           <h1
-            className="font-display font-semibold text-[#1C1C1A] leading-[1.05] tracking-tight mb-8"
+            className="font-display text-[#1C1C1A] leading-[1.05] tracking-tight mb-8"
             style={{ fontSize: 'clamp(2.4rem, 6vw, 5rem)' }}
           >
             Let's talk.
@@ -25,8 +25,7 @@ export default function Contact() {
 
         <ScrollReveal delay={100}>
           <p className="text-[#8A8A82] leading-relaxed mb-12" style={{ fontSize: 'clamp(1rem, 1.4vw, 1.15rem)' }}>
-            Open to IC lead and founding designer roles. If you're building something ambitious and need
-            a designer who can think in systems and move fast — I'd love to hear from you.
+            If you're building something amazing, I'd love to hear about it.
           </p>
         </ScrollReveal>
 

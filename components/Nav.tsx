@@ -86,6 +86,7 @@ export default function Nav() {
             <Link
               key={href}
               href={href}
+              onClick={() => setMenuOpen(false)}
               className={`text-lg font-display transition-opacity duration-200 ${
                 pathname.startsWith(href) ? 'opacity-100' : 'text-[#555]'
               }`}

@@ -62,7 +62,7 @@ export default function PuzzleProsCase() {
 
           <ScrollReveal delay={100}>
             <h1
-              className="font-display font-semibold text-[#1C1C1A] leading-[1.02] tracking-tight mb-8"
+              className="font-display text-[#1C1C1A] leading-[1.02] tracking-tight mb-8"
               style={{ fontSize: 'clamp(2.2rem, 5.5vw, 4rem)' }}
             >
               PuzzlePros
@@ -87,7 +87,7 @@ export default function PuzzleProsCase() {
             style={{ backgroundColor: '#D8D0C5', height: 'clamp(280px, 50vw, 640px)' }}
           >
             <span
-              className="font-display font-semibold text-[#1C1C1A] opacity-[0.12] select-none leading-none"
+              className="font-display text-[#1C1C1A] opacity-[0.12] select-none leading-none"
               style={{ fontSize: 'clamp(4rem, 10vw, 9rem)' }}
             >
               PP
@@ -108,18 +108,9 @@ export default function PuzzleProsCase() {
               style={{ fontSize: 'clamp(1rem, 1.3vw, 1.1rem)' }}
             >
               PuzzlePros brings puzzle experiences to kids, elderly, and corporate teams across
-              Singapore. When they came to me, they had a business but no brand. I took it from
-              zero: brand strategy, logo design, visual identity, and a fully developed Framer
-              website. Everything at{' '}
-              <a
-                href="https://puzzlepros.sg"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[#1C1C1A] underline underline-offset-2 hover:opacity-60 transition-opacity"
-              >
-                puzzlepros.sg
-              </a>{' '}
-              was designed and built by me.
+              Singapore. They had a website but no brand identity — no logo, no visual system, no
+              design direction. I worked across the full brand: strategy, logo design, visual
+              identity, and a rebuilt Framer website.
             </p>
           </section>
         </ScrollReveal>
@@ -172,7 +163,7 @@ export default function PuzzleProsCase() {
                 className="text-[#1C1C1A]/80 leading-relaxed"
                 style={{ fontSize: 'clamp(1rem, 1.3vw, 1.1rem)' }}
               >
-                The brief was fun and clean. I explored three directions — each using a pixel and
+                The brief was fun and clean. Three directions were explored — each using a pixel and
                 block letterform that nodded to puzzle pieces without being too literal. The
                 multi-colour approach made the brand feel energetic and inclusive. The white stroke
                 outline gave it a sticker-like quality that works across any background.

@@ -72,7 +72,7 @@ export default function CorporateVisaCardCase() {
 
           <ScrollReveal delay={100}>
             <h1
-              className="font-display font-semibold text-[#1C1C1A] leading-[1.02] tracking-tight mb-8"
+              className="font-display text-[#1C1C1A] leading-[1.02] tracking-tight mb-8"
               style={{ fontSize: 'clamp(2.2rem, 5.5vw, 4rem)' }}
             >
               Corporate<br />Visa Card
@@ -97,7 +97,7 @@ export default function CorporateVisaCardCase() {
             style={{ backgroundColor: '#C8C4BE', height: 'clamp(280px, 50vw, 640px)' }}
           >
             <span
-              className="font-display font-semibold text-[#1C1C1A] opacity-[0.12] select-none leading-none"
+              className="font-display text-[#1C1C1A] opacity-[0.12] select-none leading-none"
               style={{ fontSize: 'clamp(4rem, 10vw, 9rem)' }}
             >
               HQ
@@ -142,7 +142,7 @@ export default function CorporateVisaCardCase() {
               style={{ fontSize: 'clamp(1rem, 1.3vw, 1.1rem)' }}
             >
               The opportunity was to build a card product that lived natively inside HQ.xyz — connected
-              to the same wallets, the same approval logic, the same dashboard.
+              to the same wallets, the same dashboard.
             </p>
           </section>
         </ScrollReveal>
@@ -217,16 +217,11 @@ export default function CorporateVisaCardCase() {
               and legitimacy at a glance while carrying the Headquarters brand.
             </p>
             <p
-              className="text-[#1C1C1A]/80 leading-relaxed mb-10"
+              className="text-[#1C1C1A]/80 leading-relaxed"
               style={{ fontSize: 'clamp(1rem, 1.3vw, 1.1rem)' }}
             >
               Solution: matte black finish, subtle wave texture, large silver HQ monogram.
             </p>
-            <div className="border-l-2 border-[#C8C4BE] pl-6">
-              <p className="text-[#555] text-sm leading-relaxed italic">
-                Printed August 2024.
-              </p>
-            </div>
           </section>
         </ScrollReveal>
 
@@ -240,8 +235,6 @@ export default function CorporateVisaCardCase() {
                 style={{ fontSize: 'clamp(1.4rem, 2.5vw, 2rem)' }}
               >
                 Full card product designed and prototyped end-to-end. Physical cards printed.
-                Launch paused due to Visa licensing requirements in Singapore — a regulatory blocker,
-                not a design one.
               </p>
             </div>
           </section>
@@ -257,18 +250,18 @@ export default function CorporateVisaCardCase() {
         <ScrollReveal>
           <div className="px-6 md:px-12 max-w-[760px] mx-auto border-t border-[#EDEAE4] pt-10 flex items-center justify-between">
             <Link
-              href="/work/payments"
+              href="/work/freelancer-payments"
               className="font-display text-[#1C1C1A] hover:opacity-60 transition-opacity link-underline"
               style={{ fontSize: 'clamp(0.9rem, 1.3vw, 1.1rem)' }}
             >
-              ← Payments
+              ← Freelancer Payments
             </Link>
             <Link
-              href="/works/noodle-factory-chatbot"
+              href="/work/puzzlepros"
               className="font-display text-[#1C1C1A] hover:opacity-60 transition-opacity link-underline"
               style={{ fontSize: 'clamp(0.9rem, 1.3vw, 1.1rem)' }}
             >
-              AI Chatbot →
+              PuzzlePros →
             </Link>
           </div>
         </ScrollReveal>
