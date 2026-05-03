@@ -5,7 +5,7 @@ import { usePathname } from 'next/navigation'
 import { useEffect, useState } from 'react'
 
 const links = [
-  { href: '/works', label: 'Works' },
+  { href: '/#works', label: 'Works' },
   { href: '/about', label: 'About' },
   { href: '/resume', label: 'Résumé' },
   { href: '/contact', label: 'Contact' },
@@ -48,8 +48,8 @@ export default function Nav() {
             <Link
               key={href}
               href={href}
-              className={`text-sm tracking-wide transition-opacity duration-300 hover:opacity-100 link-underline ${
-                pathname.startsWith(href) ? 'opacity-100' : 'opacity-45'
+              className={`text-sm tracking-wide transition-colors duration-300 hover:text-[#1C1C1A] link-underline ${
+                (href.startsWith('/#') ? pathname === '/' : pathname.startsWith(href)) ? 'text-[#1C1C1A]' : 'text-[#555]'
               }`}
             >
               {label}
@@ -87,7 +87,7 @@ export default function Nav() {
               key={href}
               href={href}
               className={`text-lg font-display transition-opacity duration-200 ${
-                pathname.startsWith(href) ? 'opacity-100' : 'opacity-50'
+                pathname.startsWith(href) ? 'opacity-100' : 'text-[#555]'
               }`}
             >
               {label}

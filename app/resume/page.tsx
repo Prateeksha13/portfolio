@@ -8,96 +8,151 @@ export const metadata: Metadata = {
 
 const experience = [
   {
-    title: 'Lead Product Designer',
+    title: 'Lead Product Designer / Founding Designer',
     company: 'Gnosis Business',
-    period: '2022 – Present',
-    location: 'Singapore',
+    period: 'Nov 2022 – Present',
     bullets: [
-      'Sole designer leading end-to-end product design for payment and asset management products',
-      'Designed bulk payment infrastructure and maker-checker approval workflows, now powering $1B+ in GTV across 200+ businesses',
-      'Established design systems, component libraries, and documentation for engineering handoff',
-      'Partnered directly with founders on product strategy and roadmap decisions',
+      'Led design of payment and asset management systems across the Gnosis Business app (batch payments, off-ramp, approvals), powering $1B+ in GTV across 200+ businesses.',
+      'Owned a 0→1 freelancer product for payments, invoicing, and transaction management with simplified UX.',
+      'Built payment link flows improving transaction accessibility and usability across user types.',
+      'Designed mobile experience for treasury visibility — balances, cash flow, and transactions on the go.',
+      'Designed self-custody Corporate Visa debit card and management dashboard for end-to-end transaction visibility.',
+      'Established a scalable design system enabling faster product iteration and reducing inconsistencies.',
+      'Partnered closely with engineering to define product priorities and make product trade-offs.',
+    ],
+  },
+  {
+    title: 'Senior UX Designer',
+    company: 'Kaddra',
+    period: 'Jun 2022 – Oct 2022',
+    bullets: [
+      'Led product and UI design for a no-code mobile app builder and white-label e-commerce applications.',
+      'Designed mobile-first e-commerce experiences enabling brands to launch customizable apps.',
+      'Built and maintained a design system improving consistency across products.',
     ],
   },
   {
     title: 'UX Manager',
     company: 'Noodle Factory',
-    period: '2019 – 2022',
-    location: 'Singapore',
+    period: 'Sep 2019 – May 2022',
     bullets: [
-      'Led design across AI chatbot platform — student-facing product, admin console, and embeddable widgets',
-      'Built and managed a small design team; introduced design processes and rituals from scratch',
-      'Created a unified design system deployed across web, mobile, and third-party integrations',
-      'Designed conversational UX and microcopy strategy to improve bot approachability and engagement',
+      'Designed an AI-powered conversational platform used across educational institutions.',
+      'Built chatbot tools, web applications, and embeddable widgets to support scalable deployment.',
     ],
   },
   {
-    title: 'Product Designer',
-    company: 'Earlier Roles',
-    period: '2016 – 2019',
-    location: 'Bangalore',
+    title: 'Software Development Engineer II',
+    company: 'CoWrks',
+    period: 'Jun 2018 – Aug 2019',
     bullets: [
-      'Designed 0→1 products across SaaS and consumer domains',
-      'Built no-code app builders and design systems from scratch',
-      'Frontend engineering background informed pixel-level design and engineering collaboration',
+      'Developed React-based applications for booking, onboarding, and admin management systems.',
+      'Led UI development across 5+ products, improving performance and usability.',
     ],
   },
 ]
 
 const skills = [
-  { category: 'Design', items: 'UX/UI, Design Systems, Interaction Design, Information Architecture, User Research, Usability Testing, Visual Design' },
-  { category: 'Speciality', items: 'Complex Workflows, Transaction Systems, Conversational UI, Data-heavy Interfaces, 0→1 Products' },
-  { category: 'Tools', items: 'Figma, Framer, Webflow, Illustrator, Claude, Figma AI' },
-  { category: 'Frontend', items: 'React, JavaScript, HTML/CSS' },
-  { category: 'Leadership', items: 'Founding Designer, Stakeholder Management, Cross-functional Collaboration, Product Strategy' },
+  {
+    category: 'Design',
+    items: 'UX/UI, Design Systems, Interaction Design, User Flows, Information Architecture, User Research, Usability Testing, Brand/Visual Design',
+  },
+  {
+    category: 'Systems',
+    items: 'Complex Workflows, Transaction Systems, Data-heavy Interfaces',
+  },
+  {
+    category: 'Tools',
+    items: 'Figma, Webflow, Framer, Wix, WordPress, Illustrator',
+  },
+  {
+    category: 'Frontend',
+    items: 'React, JavaScript, HTML/CSS',
+  },
+  {
+    category: 'Leadership',
+    items: 'Stakeholder Management, Cross-functional Collaboration, Product Strategy, Prioritisation',
+  },
+  {
+    category: 'AI Tools',
+    items: 'AI-assisted UX workflows (ideation, UX writing, prototyping), Claude, Figma AI, UX Pilot, Stitch',
+  },
 ]
 
 export default function Resume() {
   return (
     <div className="page-enter pt-32 pb-24 px-6 md:px-12 max-w-4xl mx-auto">
+
       {/* Header */}
-      <ScrollReveal className="flex items-start justify-between mb-16 flex-wrap gap-4">
-        <div>
-          <span className="text-xs tracking-[0.22em] text-[#8A8A82] uppercase block mb-4">Résumé</span>
-          <h1 className="font-display font-semibold text-[#1C1C1A] text-4xl md:text-5xl">Prateeksha</h1>
-          <p className="text-[#8A8A82] mt-2">Lead Product Designer · Singapore</p>
+      <ScrollReveal className="mb-14">
+        <div className="flex items-start justify-between flex-wrap gap-5">
+          <div>
+            <span className="text-sm tracking-[0.22em] text-[#555] uppercase block mb-4">Résumé</span>
+            <h1 className="font-display font-semibold text-[#1C1C1A] mb-2" style={{ fontSize: 'clamp(2rem, 5vw, 3.5rem)' }}>
+              Prateeksha
+            </h1>
+            <p className="text-base text-[#555] mb-1">Lead Product Designer / Founding Designer</p>
+            <div className="flex flex-wrap items-center gap-x-4 gap-y-1 mt-3 text-sm text-[#555]">
+              <a href="https://prateeksha.ink" className="hover:text-[#1C1C1A] transition-colors link-underline" target="_blank" rel="noopener noreferrer">
+                prateeksha.ink
+              </a>
+              <span className="text-[#E2E0DA]">·</span>
+              <span>Singapore</span>
+              <span className="text-[#E2E0DA]">·</span>
+              <a href="mailto:prateeksha.ink@gmail.com" className="hover:text-[#1C1C1A] transition-colors link-underline">
+                prateeksha.ink@gmail.com
+              </a>
+              <span className="text-[#E2E0DA]">·</span>
+              <a
+                href="https://www.linkedin.com/in/prateekshatomar/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-[#1C1C1A] transition-colors link-underline"
+              >
+                LinkedIn ↗
+              </a>
+            </div>
+          </div>
+          {/* Download button — add Prateeksha-Resume.pdf to /public to activate */}
+          <a
+            href="/Prateeksha-Resume.pdf"
+            download
+            className="inline-flex items-center gap-2 border border-[#1C1C1A] text-[#1C1C1A] text-sm px-5 py-3 rounded-full hover:bg-[#1C1C1A] hover:text-[#F5F4F0] transition-all duration-300 self-start shrink-0"
+          >
+            Download Resume ↓
+          </a>
         </div>
-        <a
-          href="mailto:prateeksha.ink@gmail.com?subject=Resume Request"
-          className="inline-flex items-center gap-2 border border-[#1C1C1A] text-[#1C1C1A] text-sm px-5 py-3 rounded-full hover:bg-[#1C1C1A] hover:text-[#F5F4F0] transition-all duration-300 self-end"
-        >
-          Download PDF ↓
-        </a>
       </ScrollReveal>
 
       {/* Summary */}
-      <ScrollReveal className="mb-16 pb-16 border-b border-[#E2E0DA]">
-        <p className="text-[#1C1C1A]/80 leading-relaxed" style={{ fontSize: 'clamp(1rem, 1.3vw, 1.1rem)' }}>
-          Lead Product Designer with 8+ years designing complex systems in fintech and SaaS. Frontend engineering
-          background. Strong product intuition. I work best close to the problem — with founders, engineers, and
-          real users.
+      <ScrollReveal className="mb-14 pb-14 border-b border-[#E2E0DA]">
+        <p className="text-sm text-[#555] uppercase tracking-[0.18em] mb-4">Summary</p>
+        <p className="text-base text-[#1C1C1A]/80 leading-relaxed">
+          8+ years designing 0→1 and scalable products across fintech and SaaS. Led design of payment systems
+          supporting $1B+ in transaction value. Built and scaled products including fintech systems used by
+          200+ businesses. Strong in simplifying complex workflows and driving product decisions with founders
+          and engineering.
         </p>
       </ScrollReveal>
 
       {/* Experience */}
-      <ScrollReveal className="mb-3">
-        <p className="text-xs tracking-[0.22em] text-[#8A8A82] uppercase">Experience</p>
+      <ScrollReveal className="mb-6">
+        <p className="text-sm text-[#555] uppercase tracking-[0.18em]">Experience</p>
       </ScrollReveal>
 
-      <div className="mb-16 space-y-12">
+      <div className="mb-14 space-y-10">
         {experience.map((role, i) => (
-          <ScrollReveal key={i} delay={i * 80} className="border-b border-[#E2E0DA] pb-12">
-            <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-1 mb-5">
+          <ScrollReveal key={i} delay={i * 60} className="border-b border-[#E2E0DA] pb-10">
+            <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-1 mb-4">
               <div>
-                <h2 className="font-display font-medium text-[#1C1C1A] text-xl">{role.title}</h2>
-                <p className="text-[#8A8A82] text-sm mt-1">{role.company} · {role.location}</p>
+                <h2 className="font-display font-medium text-[#1C1C1A] text-lg leading-snug">{role.title}</h2>
+                <p className="text-base text-[#555] mt-0.5">{role.company}</p>
               </div>
-              <span className="text-sm text-[#8A8A82] shrink-0 md:mt-1">{role.period}</span>
+              <span className="text-sm text-[#555] shrink-0 md:mt-0.5">{role.period}</span>
             </div>
             <ul className="space-y-2">
               {role.bullets.map((b, j) => (
-                <li key={j} className="flex items-start gap-3 text-sm text-[#1C1C1A]/75 leading-relaxed">
-                  <span className="text-[#C4A882] mt-1.5 shrink-0 text-xs">◆</span>
+                <li key={j} className="flex items-start gap-3 text-sm text-[#1C1C1A]/80 leading-relaxed">
+                  <span className="text-[#C4A882] mt-[5px] shrink-0">◆</span>
                   {b}
                 </li>
               ))}
@@ -107,31 +162,35 @@ export default function Resume() {
       </div>
 
       {/* Skills */}
-      <ScrollReveal className="mb-3">
-        <p className="text-xs tracking-[0.22em] text-[#8A8A82] uppercase">Skills</p>
+      <ScrollReveal className="mb-6">
+        <p className="text-sm text-[#555] uppercase tracking-[0.18em]">Skills</p>
       </ScrollReveal>
 
-      <div className="mb-16 space-y-5">
+      <div className="mb-14 space-y-4 border-b border-[#E2E0DA] pb-14">
         {skills.map((s, i) => (
-          <ScrollReveal key={s.category} delay={i * 60} className="grid grid-cols-[120px_1fr] gap-6 text-sm">
-            <span className="text-[#8A8A82] shrink-0 pt-0.5">{s.category}</span>
-            <span className="text-[#1C1C1A]/80">{s.items}</span>
+          <ScrollReveal key={s.category} delay={i * 50}>
+            <div className="grid grid-cols-[140px_1fr] gap-4 text-sm">
+              <span className="text-[#555] shrink-0 pt-0.5 font-medium">{s.category}</span>
+              <span className="text-[#1C1C1A]/80 leading-relaxed">{s.items}</span>
+            </div>
           </ScrollReveal>
         ))}
       </div>
 
-      {/* Education placeholder */}
-      <ScrollReveal className="mb-3">
-        <p className="text-xs tracking-[0.22em] text-[#8A8A82] uppercase">Education</p>
+      {/* Education */}
+      <ScrollReveal className="mb-6">
+        <p className="text-sm text-[#555] uppercase tracking-[0.18em]">Education</p>
       </ScrollReveal>
 
-      <ScrollReveal className="flex flex-col md:flex-row md:items-start md:justify-between gap-1 text-sm">
-        <div>
-          <p className="font-display font-medium text-[#1C1C1A]">Bachelor of Engineering</p>
-          <p className="text-[#8A8A82] mt-1">Computer Science · Bangalore</p>
+      <ScrollReveal>
+        <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-1">
+          <div>
+            <p className="font-display font-medium text-[#1C1C1A] text-base">B.E, Computer Science</p>
+            <p className="text-sm text-[#555] mt-1">Reva Institute of Technology and Management</p>
+          </div>
         </div>
-        <span className="text-[#8A8A82]">2012 – 2016</span>
       </ScrollReveal>
+
     </div>
   )
 }

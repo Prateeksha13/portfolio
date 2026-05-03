@@ -1,13 +1,14 @@
 import type { Metadata } from 'next'
-import { Fraunces, DM_Sans } from 'next/font/google'
+import { DM_Serif_Display, DM_Sans } from 'next/font/google'
 import './globals.css'
 import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 import CustomCursor from '@/components/CustomCursor'
 
-const fraunces = Fraunces({
+const dmSerifDisplay = DM_Serif_Display({
   subsets: ['latin'],
-  variable: '--font-fraunces',
+  weight: '400',
+  variable: '--font-serif',
   display: 'swap',
 })
 
@@ -25,12 +26,21 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${fraunces.variable} ${dmSans.variable} h-full`}>
-      <body className="min-h-full flex flex-col bg-[#F5F4F0] text-[#1C1C1A]">
-        <CustomCursor />
-        <Nav />
-        <main className="flex-1">{children}</main>
-        <Footer />
+    <html lang="en" className={`${dmSerifDisplay.variable} ${dmSans.variable} h-full`} suppressHydrationWarning>
+      <body className="min-h-full text-[#1C1C1A]">
+        {/* Floating gradient background */}
+        <div className="gradient-canvas" aria-hidden="true">
+          <div className="g-blob g-blob-1" />
+          <div className="g-blob g-blob-2" />
+          <div className="g-blob g-blob-3" />
+        </div>
+        {/* Content sits above gradient */}
+        <div className="content-layer flex flex-col min-h-screen">
+          <CustomCursor />
+          <Nav />
+          <main className="flex-1">{children}</main>
+          <Footer />
+        </div>
       </body>
     </html>
   )

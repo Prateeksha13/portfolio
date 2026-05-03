@@ -47,7 +47,7 @@ export default function NoodleFactoryCase() {
         <ScrollReveal className="mb-6">
           <Link
             href="/works"
-            className="text-xs tracking-[0.15em] text-[#8A8A82] uppercase hover:text-[#1C1C1A] transition-colors link-underline"
+            className="text-sm tracking-[0.15em] text-[#555] uppercase hover:text-[#1C1C1A] transition-colors link-underline"
           >
             ← Works
           </Link>
@@ -55,7 +55,7 @@ export default function NoodleFactoryCase() {
         <div className="grid md:grid-cols-[1fr_auto] gap-8 items-end">
           <div>
             <ScrollReveal delay={60}>
-              <p className="text-sm text-[#8A8A82] mb-4">Noodle Factory · 2019–2022</p>
+              <p className="text-sm text-[#555] mb-4">Noodle Factory · 2019–2022</p>
             </ScrollReveal>
             <ScrollReveal delay={100}>
               <h1
@@ -66,7 +66,7 @@ export default function NoodleFactoryCase() {
               </h1>
             </ScrollReveal>
             <ScrollReveal delay={160}>
-              <p className="font-display font-light text-[#8A8A82] italic" style={{ fontSize: 'clamp(1.1rem, 2vw, 1.5rem)' }}>
+              <p className="font-display font-light text-[#555] italic" style={{ fontSize: 'clamp(1.1rem, 2vw, 1.5rem)' }}>
                 Making AI feel human — at institutional scale
               </p>
             </ScrollReveal>
@@ -74,7 +74,7 @@ export default function NoodleFactoryCase() {
           <ScrollReveal delay={200} className="flex flex-col gap-3 md:text-right">
             {[['Role', 'UX Manager'], ['Domain', 'AI / EdTech'], ['Scale', 'Multiple institutions']].map(([k, v]) => (
               <div key={k}>
-                <p className="text-xs text-[#8A8A82] tracking-wide uppercase">{k}</p>
+                <p className="text-sm text-[#555] tracking-wide uppercase">{k}</p>
                 <p className="text-sm text-[#1C1C1A] font-medium">{v}</p>
               </div>
             ))}
@@ -98,7 +98,7 @@ export default function NoodleFactoryCase() {
         {sections.map((s, i) => (
           <ScrollReveal key={s.label} delay={i * 60}>
             <div className="grid md:grid-cols-[160px_1fr] gap-6 md:gap-12">
-              <p className="text-xs tracking-[0.2em] text-[#8A8A82] uppercase pt-1">{s.label}</p>
+              <p className="text-sm tracking-[0.2em] text-[#555] uppercase pt-1">{s.label}</p>
               <p className="text-[#1C1C1A]/80 leading-relaxed" style={{ fontSize: 'clamp(1rem, 1.3vw, 1.1rem)' }}>{s.content}</p>
             </div>
           </ScrollReveal>
@@ -106,7 +106,7 @@ export default function NoodleFactoryCase() {
 
         <ScrollReveal>
           <div className="grid md:grid-cols-[160px_1fr] gap-6 md:gap-12">
-            <p className="text-xs tracking-[0.2em] text-[#8A8A82] uppercase pt-1">Key Challenges</p>
+            <p className="text-sm tracking-[0.2em] text-[#555] uppercase pt-1">Key Challenges</p>
             <ul className="space-y-4">
               {challenges.map((c, i) => (
                 <li key={i} className="flex items-start gap-4">
@@ -120,7 +120,7 @@ export default function NoodleFactoryCase() {
 
         <ScrollReveal>
           <div className="grid md:grid-cols-[160px_1fr] gap-6 md:gap-12">
-            <p className="text-xs tracking-[0.2em] text-[#8A8A82] uppercase pt-1">Design Decisions</p>
+            <p className="text-sm tracking-[0.2em] text-[#555] uppercase pt-1">Design Decisions</p>
             <div className="space-y-8">
               {decisions.map((d, i) => (
                 <div key={i} className="border-l border-[#E2E0DA] pl-6">
@@ -134,7 +134,7 @@ export default function NoodleFactoryCase() {
 
         <ScrollReveal>
           <div className="bg-[#EDEAE4] rounded-2xl p-8 md:p-12">
-            <p className="text-xs tracking-[0.2em] text-[#8A8A82] uppercase mb-6">Outcome</p>
+            <p className="text-sm tracking-[0.2em] text-[#555] uppercase mb-6">Outcome</p>
             <p
               className="font-display font-light text-[#1C1C1A] leading-snug"
               style={{ fontSize: 'clamp(1.3rem, 2.5vw, 2rem)' }}
@@ -146,7 +146,7 @@ export default function NoodleFactoryCase() {
 
         <ScrollReveal>
           <div className="border-t border-[#E2E0DA] pt-10 flex items-center justify-between">
-            <p className="text-sm text-[#8A8A82]">Previous case study</p>
+            <p className="text-sm text-[#555]">Previous case study</p>
             <Link
               href="/works/gnosis-bulk-payments"
               className="font-display font-medium text-[#1C1C1A] hover:opacity-60 transition-opacity link-underline"

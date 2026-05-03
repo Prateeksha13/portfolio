@@ -1,20 +1,26 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-bg: #F5F4F0;
+  --color-bg: #FFFFFF;
   --color-ink: #1C1C1A;
-  --color-muted: #8A8A82;
+  --color-muted: #555555;
   --color-border: #E2E0DA;
   --color-card: #EDEAE4;
   --color-accent: #C4A882;
 
-  --font-display: var(--font-fraunces);
+  --font-display: var(--font-serif);
   --font-body: var(--font-dm-sans);
 }
 
-/* Base */
+/* ── Global sharp corners ─────────────────────────────────── */
 *, *::before, *::after {
   cursor: none;
+  border-radius: 0 !important;
+}
+
+.cursor-ring,
+.cursor-dot {
+  border-radius: 50% !important;
 }
 
 html {
@@ -22,11 +28,79 @@ html {
 }
 
 body {
-  background-color: #F5F4F0;
+  background: #FFFFFF;
   color: #1C1C1A;
   font-family: var(--font-dm-sans), system-ui, sans-serif;
+  font-size: 16px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Floating gradient blob clusters ─────────────────────── */
+.gradient-canvas {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.content-layer {
+  position: relative;
+  z-index: 1;
+}
+
+.g-blob {
+  position: absolute;
+  will-change: transform;
+}
+
+/* Orange — top right */
+.g-blob-1 {
+  width: clamp(400px, 70vmax, 950px);
+  height: clamp(400px, 70vmax, 950px);
+  background: radial-gradient(circle at center, rgba(255, 160, 80, 0.52) 0%, transparent 62%);
+  filter: blur(140px);
+  top: -15%;
+  right: -15%;
+  animation: blobFloat1 26s ease-in-out infinite alternate;
+}
+
+/* Pink — right, mid-height (visible on both mobile and desktop) */
+.g-blob-2 {
+  width: clamp(350px, 60vmax, 850px);
+  height: clamp(350px, 60vmax, 850px);
+  background: radial-gradient(circle at center, rgba(255, 130, 175, 0.42) 0%, transparent 62%);
+  filter: blur(130px);
+  top: 35%;
+  right: -20%;
+  animation: blobFloat2 34s ease-in-out infinite alternate;
+}
+
+/* Blue — bottom left */
+.g-blob-3 {
+  width: clamp(350px, 55vmax, 800px);
+  height: clamp(350px, 55vmax, 800px);
+  background: radial-gradient(circle at center, rgba(120, 170, 255, 0.40) 0%, transparent 62%);
+  filter: blur(120px);
+  bottom: -12%;
+  left: -15%;
+  animation: blobFloat3 42s ease-in-out infinite alternate;
+}
+
+@keyframes blobFloat1 {
+  from { transform: translate(0, 0) scale(1); }
+  to   { transform: translate(-7%, 10%) scale(1.14); }
+}
+
+@keyframes blobFloat2 {
+  from { transform: translate(0, 0) scale(1.05); }
+  to   { transform: translate(-10%, -8%) scale(0.90); }
+}
+
+@keyframes blobFloat3 {
+  from { transform: translate(0, 0) scale(0.95); }
+  to   { transform: translate(8%, -6%) scale(1.10); }
 }
 
 /* Custom cursor */
@@ -37,11 +111,10 @@ body {
   width: 36px;
   height: 36px;
   border: 1.5px solid #1C1C1A;
-  border-radius: 50%;
   pointer-events: none;
   z-index: 9999;
   transform: translate(-50%, -50%);
-  transition: width 0.25s ease, height 0.25s ease, border-color 0.25s ease, opacity 0.25s ease;
+  transition: width 0.25s ease, height 0.25s ease, border-color 0.25s ease, opacity 0.2s ease;
   will-change: transform;
   mix-blend-mode: multiply;
 }
@@ -59,23 +132,17 @@ body {
   width: 5px;
   height: 5px;
   background: #1C1C1A;
-  border-radius: 50%;
   pointer-events: none;
   z-index: 9999;
   transform: translate(-50%, -50%);
+  transition: opacity 0.2s ease;
   will-change: transform;
 }
 
 /* Page animation */
 @keyframes pageIn {
-  from {
-    opacity: 0;
-    transform: translateY(12px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
 .page-enter {
@@ -84,26 +151,21 @@ body {
 
 /* Hero stagger */
 @keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(28px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
 .hero-1 { animation: fadeUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.05s both; }
-.hero-2 { animation: fadeUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.2s both; }
+.hero-2 { animation: fadeUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.2s  both; }
 .hero-3 { animation: fadeUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.35s both; }
-.hero-4 { animation: fadeUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.5s both; }
+.hero-4 { animation: fadeUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.5s  both; }
 
 /* Scroll reveal */
 .reveal {
   opacity: 0;
   transform: translateY(24px);
-  transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1), transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .reveal.is-visible {
@@ -113,7 +175,7 @@ body {
 
 /* Typography */
 .font-display {
-  font-family: var(--font-fraunces), Georgia, serif;
+  font-family: var(--font-display), Georgia, serif;
 }
 
 /* Link underline hover */
@@ -137,17 +199,47 @@ body {
   width: 100%;
 }
 
-/* Card hover image scale */
+/* ── Card hover overlay ───────────────────────────────────── */
 .card-image-wrap {
   overflow: hidden;
-  border-radius: 12px;
+  position: relative;
 }
 
-.card-image-wrap img,
 .card-image-inner {
-  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .card-image-wrap:hover .card-image-inner {
-  transform: scale(1.03);
+  transform: scale(1.04);
+}
+
+/* Frosted dark overlay that slides up on hover */
+.card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(14, 12, 10, 0.74) 0%,
+    rgba(14, 12, 10, 0.38) 38%,
+    rgba(14, 12, 10, 0.04) 100%
+  );
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 2rem;
+  transition: opacity 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.card-image-wrap:hover .card-overlay {
+  opacity: 1;
+}
+
+.card-overlay-body {
+  transform: translateY(14px);
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1) 0.05s;
+}
+
+.card-image-wrap:hover .card-overlay-body {
+  transform: translateY(0);
 }
