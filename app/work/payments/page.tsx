@@ -102,7 +102,7 @@ export default function PaymentsCase() {
         <ScrollReveal>
           <div className="w-full relative" style={{ height: 'clamp(280px, 50vw, 640px)' }}>
             <Image
-              src="/images/payments/cover.png"
+              src="/images/payments/cover.jpg"
               alt="Payments case study cover"
               fill
               className="object-cover"
@@ -131,7 +131,7 @@ export default function PaymentsCase() {
         </ScrollReveal>
 
         <CaseImage
-          src="/images/payments/manage-drafts.png"
+          src="/images/payments/manage-drafts.jpg"
           alt="Manage Drafts"
           caption="Manage Drafts — payment list with status"
         />
@@ -212,7 +212,7 @@ export default function PaymentsCase() {
         </ScrollReveal>
 
         <CaseImage
-          src="/images/payments/payment-detail.png"
+          src="/images/payments/payment-detail.jpg"
           alt="Payment detail panel"
           caption="Payment detail panel — recipient, amount, notes and file attachments"
         />
@@ -251,7 +251,7 @@ export default function PaymentsCase() {
         </ScrollReveal>
 
         <CaseImage
-          src="/images/payments/send-payment.png"
+          src="/images/payments/send-payment.jpg"
           alt="Send payment screen"
           caption="Send payment — recipient details, amount, and confirmation before execution"
         />

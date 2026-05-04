@@ -72,7 +72,7 @@ export default function FreelancerPaymentsCase() {
         <ScrollReveal>
           <div className="w-full relative" style={{ height: 'clamp(280px, 50vw, 640px)' }}>
             <Image
-              src="/images/freelancer-payments/cover.png"
+              src="/images/freelancer-payments/cover.jpg"
               alt="Freelancer Payments cover"
               fill
               className="object-cover"
@@ -143,7 +143,7 @@ export default function FreelancerPaymentsCase() {
         </ScrollReveal>
 
         <CaseImage
-          src="/images/freelancer-payments/dashboard.png"
+          src="/images/freelancer-payments/dashboard.jpg"
           alt="Freelancer dashboard"
           caption="Dashboard — transaction activity, wallet balance, and quick actions"
         />
@@ -181,7 +181,7 @@ export default function FreelancerPaymentsCase() {
         </ScrollReveal>
 
         <CaseImage
-          src="/images/freelancer-payments/payment-link.png"
+          src="/images/freelancer-payments/payment-link.jpg"
           alt="Payment link creation flow"
           caption="Payment link creation flow — minimal fields, shareable link, email notification on receipt"
         />

@@ -84,7 +84,7 @@ export default function CorporateVisaCardCase() {
         <ScrollReveal>
           <div className="w-full relative" style={{ height: 'clamp(280px, 50vw, 640px)' }}>
             <Image
-              src="/images/corporate-visa-card/cover.png"
+              src="/images/corporate-visa-card/cover.jpg"
               alt="Corporate Visa Card cover"
               fill
               className="object-cover"
@@ -151,7 +151,7 @@ export default function CorporateVisaCardCase() {
         </ScrollReveal>
 
         <CaseImage
-          src="/images/corporate-visa-card/physical-card.png"
+          src="/images/corporate-visa-card/physical-card.jpg"
           alt="Physical card — front and back"
           caption="Physical card design — front and back, matte black with silver HQ monogram"
         />
@@ -180,7 +180,7 @@ export default function CorporateVisaCardCase() {
         </ScrollReveal>
 
         <CaseImage
-          src="/images/corporate-visa-card/dashboard.png"
+          src="/images/corporate-visa-card/dashboard.jpg"
           alt="Card management dashboard"
           caption="Card management dashboard — transaction history and card status"
         />
@@ -236,7 +236,7 @@ export default function CorporateVisaCardCase() {
         </ScrollReveal>
 
         <CaseImage
-          src="/images/corporate-visa-card/updated-card-designs.png"
+          src="/images/corporate-visa-card/updated-card-designs.jpg"
           alt="Updated card designs — post-acquisition branding"
           caption="Updated card designs — post-acquisition branding"
         />

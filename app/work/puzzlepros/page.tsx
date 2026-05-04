@@ -74,7 +74,7 @@ export default function PuzzleProsCase() {
         <ScrollReveal>
           <div className="w-full relative" style={{ height: 'clamp(280px, 50vw, 640px)' }}>
             <Image
-              src="/images/puzzlepros/cover.png"
+              src="/images/puzzlepros/cover.jpg"
               alt="PuzzlePros cover"
               fill
               className="object-cover"
@@ -134,7 +134,7 @@ export default function PuzzleProsCase() {
         </ScrollReveal>
 
         <CaseImage
-          src="/images/puzzlepros/logo-explorations.png"
+          src="/images/puzzlepros/logo-explorations.jpg"
           alt="Logo explorations"
           caption="Logo explorations — three directions, pixel letterform with multi-colour palette"
         />
@@ -177,7 +177,7 @@ export default function PuzzleProsCase() {
         <ScrollReveal>
           <figure className="w-full mb-24">
             <Image
-              src="/images/puzzlepros/website-homepage.png"
+              src="/images/puzzlepros/website-homepage.jpg"
               alt="Website homepage"
               width={2400}
               height={3200}
@@ -190,7 +190,7 @@ export default function PuzzleProsCase() {
         </ScrollReveal>
 
         <CaseImage
-          src="/images/puzzlepros/brand-system.png"
+          src="/images/puzzlepros/brand-system.jpg"
           alt="Brand system"
           caption="Brand system — colour palette, typography, and illustrated characters across applications"
         />
