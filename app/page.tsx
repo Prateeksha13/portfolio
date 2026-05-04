@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import ScrollReveal from '@/components/ScrollReveal'
 
@@ -8,6 +9,7 @@ type Work = {
   description: string
   year: string
   accent: string
+  image: string
   href: string | null
   external?: boolean
   cta: string
@@ -21,26 +23,29 @@ const works: Work[] = [
     description: 'Designing trust into high-stakes financial workflows — bulk payment infrastructure and approval systems powering $1B+ in transactions.',
     year: '2022–Present',
     accent: '#DDD5C8',
+    image: '/images/payments/cover.png',
     href: '/work/payments',
     cta: 'View case study →',
   },
   {
     index: '02',
-    title: 'Freelancer Payments & Invoicing',
-    company: '',
-    description: 'Payments and invoicing product built from scratch for a new user segment — focused on clarity and ease of use.',
+    title: 'Freelancer Payments',
+    company: 'Gnosis Business',
+    description: 'Payment links and invoicing built from scratch for a new user segment — focused on clarity and ease of use.',
     year: '2023–2024',
     accent: '#D5CFC8',
+    image: '/images/freelancer-payments/cover.png',
     href: '/work/freelancer-payments',
     cta: 'View case study →',
   },
   {
     index: '03',
     title: 'Corporate Visa Card',
-    company: '',
+    company: 'HQ.xyz (Now Gnosis Business)',
     description: 'Designing a premium business card experience — physical card design, issuance flows, and a full spend management dashboard.',
     year: '2024',
     accent: '#C8C4BE',
+    image: '/images/corporate-visa-card/cover.png',
     href: '/work/corporate-visa-card',
     cta: 'View case study →',
   },
@@ -51,6 +56,7 @@ const works: Work[] = [
     description: 'Full brand identity and website design for a Singapore-based puzzle company.',
     year: '2024',
     accent: '#D8D0C5',
+    image: '/images/puzzlepros/cover.png',
     href: '/work/puzzlepros',
     cta: 'View case study →',
   },
@@ -61,17 +67,13 @@ function WorkCard({ work }: { work: Work }) {
     <div className="group block">
       {/* Card image */}
       <div className="card-image-wrap mb-5 aspect-[4/3]">
-        <div
-          className="card-image-inner absolute inset-0 flex items-start p-7"
-          style={{ backgroundColor: work.accent }}
-        >
-          <span
-            className="font-display text-[#1C1C1A] opacity-[0.14] select-none leading-none"
-            style={{ fontSize: 'clamp(3rem, 7vw, 5.5rem)' }}
-          >
-            {work.index}
-          </span>
-        </div>
+        <Image
+          src={work.image}
+          alt={work.title}
+          fill
+          className="card-image-inner object-cover"
+          sizes="(max-width: 768px) 100vw, 50vw"
+        />
 
         {/* Hover overlay — gradient from dark bottom, fading up */}
         <div className="card-overlay">

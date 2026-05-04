@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 import ScrollReveal from '@/components/ScrollReveal'
 
@@ -7,23 +8,12 @@ export const metadata: Metadata = {
   description: 'From blank canvas to full brand — logo, identity, and website for a puzzle experience company.',
 }
 
-function ImagePlaceholder({
-  label,
-  caption,
-  bg = '#E8E3DC',
-}: {
-  label: string
-  caption: string
-  bg?: string
-}) {
+function CaseImage({ src, alt, caption }: { src: string; alt: string; caption: string }) {
   return (
     <ScrollReveal>
       <figure className="w-full mb-24">
-        <div
-          className="w-full flex items-center justify-center"
-          style={{ backgroundColor: bg, height: 'clamp(240px, 45vw, 560px)' }}
-        >
-          <p className="text-sm text-[#AAA] italic select-none">{label}</p>
+        <div className="w-full relative" style={{ height: 'clamp(240px, 45vw, 560px)' }}>
+          <Image src={src} alt={alt} fill className="object-cover" />
         </div>
         <figcaption className="px-6 md:px-12 max-w-[760px] mx-auto mt-4 text-xs text-[#AAA] italic">
           {caption}
@@ -82,16 +72,14 @@ export default function PuzzleProsCase() {
 
         {/* Hero image */}
         <ScrollReveal>
-          <div
-            className="w-full flex items-center justify-center"
-            style={{ backgroundColor: '#D8D0C5', height: 'clamp(280px, 50vw, 640px)' }}
-          >
-            <span
-              className="font-display text-[#1C1C1A] opacity-[0.12] select-none leading-none"
-              style={{ fontSize: 'clamp(4rem, 10vw, 9rem)' }}
-            >
-              PP
-            </span>
+          <div className="w-full relative" style={{ height: 'clamp(280px, 50vw, 640px)' }}>
+            <Image
+              src="/images/puzzlepros/cover.png"
+              alt="PuzzlePros cover"
+              fill
+              className="object-cover"
+              priority
+            />
           </div>
         </ScrollReveal>
       </section>
@@ -145,10 +133,10 @@ export default function PuzzleProsCase() {
           </section>
         </ScrollReveal>
 
-        <ImagePlaceholder
-          label="Logo explorations — three directions, pixel letterform"
+        <CaseImage
+          src="/images/puzzlepros/logo-explorations.png"
+          alt="Logo explorations"
           caption="Logo explorations — three directions, pixel letterform with multi-colour palette"
-          bg="#D8D0C5"
         />
 
         {/* The Design Decisions */}
@@ -156,7 +144,6 @@ export default function PuzzleProsCase() {
           <section className="px-6 md:px-12 max-w-[760px] mx-auto mb-24">
             <p className="text-[11px] tracking-[0.28em] text-[#AAA] uppercase mb-10">The Design Decisions</p>
 
-            {/* Logo */}
             <div className="mb-16">
               <p className="text-[11px] tracking-[0.2em] text-[#C4A882] uppercase mb-5">Logo</p>
               <p
@@ -170,7 +157,6 @@ export default function PuzzleProsCase() {
               </p>
             </div>
 
-            {/* Website */}
             <div>
               <p className="text-[11px] tracking-[0.2em] text-[#C4A882] uppercase mb-5">Website</p>
               <p
@@ -187,16 +173,26 @@ export default function PuzzleProsCase() {
           </section>
         </ScrollReveal>
 
-        <ImagePlaceholder
-          label="Website homepage — hero, audience cards, process section"
-          caption="Website homepage — hero section, three audience pathway cards, and the four-step booking process"
-          bg="#C8C4BE"
-        />
+        {/* Website homepage — taller image, natural height */}
+        <ScrollReveal>
+          <figure className="w-full mb-24">
+            <Image
+              src="/images/puzzlepros/website-homepage.png"
+              alt="Website homepage"
+              width={2400}
+              height={3200}
+              style={{ width: '100%', height: 'auto', display: 'block' }}
+            />
+            <figcaption className="px-6 md:px-12 max-w-[760px] mx-auto mt-4 text-xs text-[#AAA] italic">
+              Website homepage — hero section, three audience pathway cards, and the four-step booking process
+            </figcaption>
+          </figure>
+        </ScrollReveal>
 
-        <ImagePlaceholder
-          label="Brand in context — colours, typography, illustrated characters"
+        <CaseImage
+          src="/images/puzzlepros/brand-system.png"
+          alt="Brand system"
           caption="Brand system — colour palette, typography, and illustrated characters across applications"
-          bg="#E8E3DC"
         />
 
         {/* Outcome */}

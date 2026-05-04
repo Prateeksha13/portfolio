@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 import ScrollReveal from '@/components/ScrollReveal'
 
@@ -7,23 +8,12 @@ export const metadata: Metadata = {
   description: 'No onboarding. No friction. Just connect your wallet and get paid.',
 }
 
-function ImagePlaceholder({
-  label,
-  caption,
-  bg = '#E8E3DC',
-}: {
-  label: string
-  caption: string
-  bg?: string
-}) {
+function CaseImage({ src, alt, caption }: { src: string; alt: string; caption: string }) {
   return (
     <ScrollReveal>
       <figure className="w-full mb-24">
-        <div
-          className="w-full flex items-center justify-center"
-          style={{ backgroundColor: bg, height: 'clamp(240px, 45vw, 560px)' }}
-        >
-          <p className="text-sm text-[#AAA] italic select-none">{label}</p>
+        <div className="w-full relative" style={{ height: 'clamp(240px, 45vw, 560px)' }}>
+          <Image src={src} alt={alt} fill className="object-cover" />
         </div>
         <figcaption className="px-6 md:px-12 max-w-[760px] mx-auto mt-4 text-xs text-[#AAA] italic">
           {caption}
@@ -80,16 +70,14 @@ export default function FreelancerPaymentsCase() {
 
         {/* Hero image */}
         <ScrollReveal>
-          <div
-            className="w-full flex items-center justify-center"
-            style={{ backgroundColor: '#D5CFC8', height: 'clamp(280px, 50vw, 640px)' }}
-          >
-            <span
-              className="font-display text-[#1C1C1A] opacity-[0.12] select-none leading-none"
-              style={{ fontSize: 'clamp(4rem, 10vw, 9rem)' }}
-            >
-              GB
-            </span>
+          <div className="w-full relative" style={{ height: 'clamp(280px, 50vw, 640px)' }}>
+            <Image
+              src="/images/freelancer-payments/cover.png"
+              alt="Freelancer Payments cover"
+              fill
+              className="object-cover"
+              priority
+            />
           </div>
         </ScrollReveal>
       </section>
@@ -154,10 +142,10 @@ export default function FreelancerPaymentsCase() {
           </section>
         </ScrollReveal>
 
-        <ImagePlaceholder
-          label="Freelancer dashboard — wallet view and payment links"
-          caption="Dashboard — active payment links, payment status, and wallet balance at a glance"
-          bg="#D5CFC8"
+        <CaseImage
+          src="/images/freelancer-payments/dashboard.png"
+          alt="Freelancer dashboard"
+          caption="Dashboard — transaction activity, wallet balance, and quick actions"
         />
 
         {/* The Core Design Decision */}
@@ -192,10 +180,10 @@ export default function FreelancerPaymentsCase() {
           </section>
         </ScrollReveal>
 
-        <ImagePlaceholder
-          label="Payment link creation flow"
+        <CaseImage
+          src="/images/freelancer-payments/payment-link.png"
+          alt="Payment link creation flow"
           caption="Payment link creation flow — minimal fields, shareable link, email notification on receipt"
-          bg="#C8C4BE"
         />
 
         {/* Navigation */}

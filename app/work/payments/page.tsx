@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 import ScrollReveal from '@/components/ScrollReveal'
 
@@ -19,9 +20,9 @@ const decisions = [
       'Each draft carried tags, notes, account category, and file attachments so checkers could approve confidently without chasing the maker. Context lived with the payment, not in a separate email thread.',
   },
   {
-    title: 'Bulk selection with a sticky action bar',
+    title: 'A clear send payment flow',
     description:
-      'A floating action bar let reviewers select and execute multiple approved drafts in one action. Reduced the time to clear a batch of approved payments from minutes to seconds.',
+      'The send payment screen showed recipient, amount, and a full confirmation summary before execution. No ambiguity at the moment of highest stakes — every detail visible and reviewable before the payment goes out.',
   },
   {
     title: 'Off-ramp payment summary panel',
@@ -35,23 +36,12 @@ const decisions = [
   },
 ]
 
-function ImagePlaceholder({
-  label,
-  caption,
-  bg = '#E8E3DC',
-}: {
-  label: string
-  caption: string
-  bg?: string
-}) {
+function CaseImage({ src, alt, caption }: { src: string; alt: string; caption: string }) {
   return (
     <ScrollReveal>
       <figure className="w-full mb-24">
-        <div
-          className="w-full flex items-center justify-center"
-          style={{ backgroundColor: bg, height: 'clamp(240px, 45vw, 560px)' }}
-        >
-          <p className="text-sm text-[#AAA] italic select-none">{label}</p>
+        <div className="w-full relative" style={{ height: 'clamp(240px, 45vw, 560px)' }}>
+          <Image src={src} alt={alt} fill className="object-cover" />
         </div>
         <figcaption className="px-6 md:px-12 max-w-[760px] mx-auto mt-4 text-xs text-[#AAA] italic">
           {caption}
@@ -110,16 +100,14 @@ export default function PaymentsCase() {
 
         {/* Hero image */}
         <ScrollReveal>
-          <div
-            className="w-full flex items-center justify-center"
-            style={{ backgroundColor: '#DDD5C8', height: 'clamp(280px, 50vw, 640px)' }}
-          >
-            <span
-              className="font-display text-[#1C1C1A] opacity-[0.10] select-none leading-none"
-              style={{ fontSize: 'clamp(4rem, 10vw, 9rem)' }}
-            >
-              Gnosis
-            </span>
+          <div className="w-full relative" style={{ height: 'clamp(280px, 50vw, 640px)' }}>
+            <Image
+              src="/images/payments/cover.png"
+              alt="Payments case study cover"
+              fill
+              className="object-cover"
+              priority
+            />
           </div>
         </ScrollReveal>
       </section>
@@ -142,10 +130,10 @@ export default function PaymentsCase() {
           </section>
         </ScrollReveal>
 
-        <ImagePlaceholder
-          label="Manage Drafts"
-          caption="Manage Drafts — payment list with status and reviewer assignment"
-          bg="#E8E3DC"
+        <CaseImage
+          src="/images/payments/manage-drafts.png"
+          alt="Manage Drafts"
+          caption="Manage Drafts — payment list with status"
         />
 
         {/* The Problem */}
@@ -181,7 +169,7 @@ export default function PaymentsCase() {
             >
               Sole lead designer. Owned the full design from flow mapping and wireframes through
               to shipped UI. Worked directly with the founding team and engineering to define scope
-              and make product trade-offs. Every decision, every screen, every spec.
+              and make product trade-offs.
             </p>
           </section>
         </ScrollReveal>
@@ -223,10 +211,10 @@ export default function PaymentsCase() {
           </section>
         </ScrollReveal>
 
-        <ImagePlaceholder
-          label="Payment detail panel"
+        <CaseImage
+          src="/images/payments/payment-detail.png"
+          alt="Payment detail panel"
           caption="Payment detail panel — recipient, amount, notes and file attachments"
-          bg="#E0E5E0"
         />
 
         {/* Key Design Decisions */}
@@ -262,10 +250,10 @@ export default function PaymentsCase() {
           </section>
         </ScrollReveal>
 
-        <ImagePlaceholder
-          label="Bulk selection with floating action bar"
-          caption="Reviewed tab — bulk selection with floating action bar"
-          bg="#DDD5C8"
+        <CaseImage
+          src="/images/payments/send-payment.png"
+          alt="Send payment screen"
+          caption="Send payment — recipient details, amount, and confirmation before execution"
         />
 
         {/* Outcome */}

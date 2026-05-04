@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 import ScrollReveal from '@/components/ScrollReveal'
 
@@ -19,23 +20,12 @@ const scope = [
   'Dispute a transaction',
 ]
 
-function ImagePlaceholder({
-  label,
-  caption,
-  bg = '#E8E3DC',
-}: {
-  label: string
-  caption: string
-  bg?: string
-}) {
+function CaseImage({ src, alt, caption }: { src: string; alt: string; caption: string }) {
   return (
     <ScrollReveal>
       <figure className="w-full mb-24">
-        <div
-          className="w-full flex items-center justify-center"
-          style={{ backgroundColor: bg, height: 'clamp(240px, 45vw, 560px)' }}
-        >
-          <p className="text-sm text-[#AAA] italic select-none">{label}</p>
+        <div className="w-full relative" style={{ height: 'clamp(240px, 45vw, 560px)' }}>
+          <Image src={src} alt={alt} fill className="object-cover" />
         </div>
         <figcaption className="px-6 md:px-12 max-w-[760px] mx-auto mt-4 text-xs text-[#AAA] italic">
           {caption}
@@ -92,16 +82,14 @@ export default function CorporateVisaCardCase() {
 
         {/* Hero image */}
         <ScrollReveal>
-          <div
-            className="w-full flex items-center justify-center"
-            style={{ backgroundColor: '#C8C4BE', height: 'clamp(280px, 50vw, 640px)' }}
-          >
-            <span
-              className="font-display text-[#1C1C1A] opacity-[0.12] select-none leading-none"
-              style={{ fontSize: 'clamp(4rem, 10vw, 9rem)' }}
-            >
-              HQ
-            </span>
+          <div className="w-full relative" style={{ height: 'clamp(280px, 50vw, 640px)' }}>
+            <Image
+              src="/images/corporate-visa-card/cover.png"
+              alt="Corporate Visa Card cover"
+              fill
+              className="object-cover"
+              priority
+            />
           </div>
         </ScrollReveal>
       </section>
@@ -162,10 +150,10 @@ export default function CorporateVisaCardCase() {
           </section>
         </ScrollReveal>
 
-        <ImagePlaceholder
-          label="Physical card — front and back"
+        <CaseImage
+          src="/images/corporate-visa-card/physical-card.png"
+          alt="Physical card — front and back"
           caption="Physical card design — front and back, matte black with silver HQ monogram"
-          bg="#C8C4BE"
         />
 
         {/* The Scope */}
@@ -191,10 +179,10 @@ export default function CorporateVisaCardCase() {
           </section>
         </ScrollReveal>
 
-        <ImagePlaceholder
-          label="Card management dashboard"
+        <CaseImage
+          src="/images/corporate-visa-card/dashboard.png"
+          alt="Card management dashboard"
           caption="Card management dashboard — transaction history and card status"
-          bg="#D8D4CE"
         />
 
         {/* The Hardest Design Problem */}
@@ -231,19 +219,26 @@ export default function CorporateVisaCardCase() {
             <div className="border-t-2 border-[#1C1C1A] pt-10">
               <p className="text-[11px] tracking-[0.28em] text-[#AAA] uppercase mb-8">Outcome</p>
               <p
-                className="font-display font-light text-[#1C1C1A] leading-snug"
+                className="font-display font-light text-[#1C1C1A] leading-snug mb-8"
                 style={{ fontSize: 'clamp(1.4rem, 2.5vw, 2rem)' }}
               >
                 Full card product designed and prototyped end-to-end. Physical cards printed.
+              </p>
+              <p
+                className="text-[#1C1C1A]/80 leading-relaxed"
+                style={{ fontSize: 'clamp(1rem, 1.3vw, 1.1rem)' }}
+              >
+                Following an acquisition, I also worked on updated card designs incorporating the
+                new brand identity.
               </p>
             </div>
           </section>
         </ScrollReveal>
 
-        <ImagePlaceholder
-          label="Full flow overview"
-          caption="Full flow overview — from empty state to card lifecycle management"
-          bg="#E8E3DC"
+        <CaseImage
+          src="/images/corporate-visa-card/updated-card-designs.png"
+          alt="Updated card designs — post-acquisition branding"
+          caption="Updated card designs — post-acquisition branding"
         />
 
         {/* Navigation */}
