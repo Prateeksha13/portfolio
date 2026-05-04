@@ -7,7 +7,7 @@ import { useEffect, useState } from 'react'
 const links = [
   { href: '/#works', label: 'Works' },
   { href: '/about', label: 'About' },
-  { href: '/resume', label: 'Résumé' },
+  { href: '/resume', label: 'Resume' },
   { href: '/contact', label: 'Contact' },
 ]
 
@@ -39,7 +39,7 @@ export default function Nav() {
           href="/"
           className="font-display text-base font-medium tracking-tight hover:opacity-60 transition-opacity duration-300"
         >
-          Prateeksha
+          P
         </Link>
 
         {/* Desktop nav */}

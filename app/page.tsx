@@ -114,7 +114,7 @@ export default function Home() {
       {/* Hero — Jules studio style */}
       <section className="pt-36 pb-20 px-6 md:px-12 max-w-7xl mx-auto">
         <div className="hero-1 mb-10">
-          <span className="inline-block text-[11px] tracking-[0.22em] text-[#999] uppercase border border-[#DEDAD4] px-4 py-2 whitespace-nowrap">
+          <span className="text-[11px] tracking-[0.22em] text-[#999] uppercase">
             Product Designer
           </span>
         </div>
