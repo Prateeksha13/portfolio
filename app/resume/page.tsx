@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import ScrollReveal from '@/components/ScrollReveal'
 
 export const metadata: Metadata = {
-  title: 'Résumé — Prateeksha',
+  title: 'Resume — Prateeksha',
   description: 'Lead Product Designer — 8+ years in fintech and SaaS.',
 }
 
@@ -85,7 +85,7 @@ export default function Resume() {
       {/* Header */}
       <ScrollReveal className="mb-14">
         <div>
-          <span className="text-[11px] tracking-[0.28em] text-[#AAA] uppercase block mb-4">Résumé</span>
+          <span className="text-[11px] tracking-[0.28em] text-[#AAA] uppercase block mb-4">Resume</span>
           <h1 className="font-display text-[#1C1C1A] mb-2" style={{ fontSize: 'clamp(2rem, 5vw, 3.5rem)' }}>
             Prateeksha
           </h1>

@@ -5,6 +5,7 @@ import { usePathname } from 'next/navigation'
 import { useEffect, useState } from 'react'
 
 const links = [
+  { href: '/', label: 'Home' },
   { href: '/#works', label: 'Works' },
   { href: '/about', label: 'About' },
   { href: '/resume', label: 'Resume' },
@@ -37,7 +38,7 @@ export default function Nav() {
       <div className="max-w-7xl mx-auto px-6 md:px-12 h-16 flex items-center justify-between">
         <Link
           href="/"
-          className="font-display text-base font-medium tracking-tight hover:opacity-60 transition-opacity duration-300"
+          className="md:hidden font-display text-base tracking-tight hover:opacity-60 transition-opacity duration-300"
         >
           P
         </Link>

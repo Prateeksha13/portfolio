@@ -27,7 +27,7 @@ export default function Footer() {
             href="/resume"
             className="text-sm text-[#555] hover:text-[#1C1C1A] transition-colors duration-300 link-underline"
           >
-            Résumé
+            Resume
           </Link>
         </div>
         <p className="text-sm text-[#555]">© {new Date().getFullYear()}</p>
