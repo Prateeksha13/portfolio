@@ -35,7 +35,7 @@ export default function Nav() {
           : 'bg-transparent'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 md:px-12 h-16 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-6 md:px-12 h-16 flex items-center justify-between md:justify-center">
         <Link
           href="/"
           className="md:hidden font-display text-base tracking-tight hover:opacity-60 transition-opacity duration-300"
